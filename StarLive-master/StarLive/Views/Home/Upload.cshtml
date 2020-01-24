@@ -1,0 +1,257 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title></title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="video-upload">
+        <div class="container-fluid">
+            <div class="col-md-4 no-padding">
+                <div class="upload-section">
+                    <div class="inner">
+                        <span class="upload-header">
+                            <a href="@Url.Action("Index","Home")">
+                                <img src="~/images/f-logo.png" alt="" />
+                            </a>
+                        </span>
+                        <div class="file-upload">
+                            <form action="@Url.Action("UploadFile","Home")" class="dropzone" id="files" enctype="multipart/form-data" style="cursor:pointer">
+                                <div>
+                                    <img src="~/images/vide_player.png" alt="" />
+                                </div>
+                            </form>
+                        </div>
+                        <span class="title">Upload Your Video Here</span>
+                        <span class="sub-title">You're Done</span>
+                        <span class="list"><img src="~/images/Mobie_video_upload.png" alt="" /> Video type MP4</span>
+                        <span class="list"><img src="~/images/Mobie_video_upload.png" alt="" /> Video type avi</span>
+                        <span class="list br-btm"><i>Upload only your video and you should be part of your video</i></span>
+                        <a href="#" class="change-link">Change Another?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 no-padding">
+                <div class="video-upload-form">
+                    <div class="inner-form">
+                        <span class="upload-header">
+                            <i class="fa fa-trophy blue-clr" aria-hidden="true"></i> Join the Competitions
+                        </span>
+                        @if (Session["username"] == null)
+                        {
+                            <div class="video-login">
+                                <span>First Login Your Account or Create New Account</span>
+                                <ul>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="text" id="username" class="form-control" placeholder="Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><input type="checkbox"><span></span></label>
+                                            <label class="cus-label">Remember me <a href="#">Forget Password?</a></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="password" id="password" class="form-control" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><input type="checkbox"><span></span></label>
+                                            <label class="cus-label">New User? <a href="#">Create Account</a></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn signin-btn" onclick="login()">Sign In</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        <div class="rem-form-section">
+                            <div class="form-group db-form-group">
+                                <div>
+                                    <label>Enter a title</label>
+                                    <input type="text" id="videotitle" class="form-control" placeholder="Enter a title" />
+                                </div>
+                                <!--	<div>
+                                        <label>Enter a Category</label>
+                                        <input type="text" class="form-control" placeholder="Enter a Category" />
+                                    </div>  -->
+
+                                <div class="form-group">
+                                    <label>Enter a Category</label>
+                                    <select class="form-control" id="videocategory">
+                                        <option data-val="0" value="0">Select Category</option>
+                                        @foreach (var category in ViewBag.VideoCategory)
+                                        {
+                                            <option value="@category.CategoryID">@category.CategoryName</option>
+                                        }
+                                    </select>
+                                    @*<input type="text" id="videocategory" class="form-control" placeholder="Enter a Category" />*@
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Enter a Describtion</label>
+                                <input type="text" id="videodescribtion" class="form-control" placeholder="Enter a describtion" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Enter a Embedded</label>
+                                <input type="text" id="videoembedded" class="form-control" placeholder="Enter a embedded" />
+                            </div>
+
+                            <div class="form-group">
+                                <label><input type="checkbox" id="invitefriend"><span></span></label>
+                                <label class="cus-label">Invite friends to the video</label>
+                            </div>
+                            <div class="video_align_button">
+                                <a href="#" class="btn signin-btn" onclick="uploadVideo()" id="submit-all">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="@Url.Action("UploadFile1","Home")" class="dropzone11" method="post" id="files" enctype="multipart/form-data" style="cursor:pointer">
+        <div>
+            <img src="~/images/vide_player.png" alt="" />
+            <input type="file" />
+        </div>
+        <input type="submit" value="tets" />
+    </form>
+    <div>
+
+
+    </div>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/functionalscript.js"></script>
+    <script src="~/Scripts/dropzone.js"></script>
+    <script type="text/javascript">
+
+        Dropzone.options.dropzoneJsForm = {
+
+            //prevents Dropzone from uploading dropped files immediately
+            autoProcessQueue: false,
+
+            init: function () {
+                var submitButton = document.querySelector("#submit-all");
+                var myDropzone = this; //closure
+
+                submitButton.addEventListener("click", function () {
+
+                    //tell Dropzone to process all queued files
+                    myDropzone.processQueue();
+                });
+
+            }
+        };
+
+
+        function login() {
+            var valid = true;
+            if ($("#username").val() == "") {
+                valid = false;
+                alert("Enter email address or username!");
+            }
+            else if ($("#password").val() == "") {
+                valid = false;
+                alert("Enter password!");
+            }
+            if (valid) {
+                var model = {};
+                model.UserName = $("#username").val();
+                model.Password = $("#password").val();
+
+                try {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/Home/Login',
+                        data: '{model: ' + JSON.stringify(model) + '}',
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (result) {
+                            if (result.Status) {
+                                alert("You have successfully Login!");
+                                $(".video-login").css("display", "none");
+                            }
+                            else
+                                alert(result.Message);
+                        },
+                        error: function (ex) {
+                            console.error(JSON.stringify(ex));
+                        }
+                    });
+                } catch (e) {
+                    console.error(JSON.stringify(e));
+                }
+            }
+        }
+
+        function uploadVideo() {
+
+            var valid = true;
+            if ($("#videotitle").val() == "") {
+                valid = false;
+                alert("Enter video title!");
+            }
+            else if ($("#videocategory").val() == "0") {
+                valid = false;
+                alert("Select video category!");
+            }
+            else if ($("#videodescribtion").val() == "") {
+                valid = false;
+                alert("Enter video describtion!");
+            }
+            else if ($("#videoembedded").val() == "") {
+                valid = false;
+                alert("Enter embedded!");
+            }
+            if (valid) {
+                var model = {};
+                model.Title = $("#videotitle").val();
+                model.Category = $("#videocategory").val();
+                model.Description = $("#videodescribtion").val();
+                model.Embedded = $("#videoembedded").val();
+
+                try {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/Home/CreateVideo',
+                        data: '{model: ' + JSON.stringify(model) + '}',
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (result) {
+                            if (result.Status)
+                                alert("Your video uploaded successfully!");
+                            else
+                                alert(result.Message);
+                        },
+                        error: function (ex) {
+                            console.error(JSON.stringify(ex));
+                        }
+                    });
+                } catch (e) {
+                    console.error(JSON.stringify(e));
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

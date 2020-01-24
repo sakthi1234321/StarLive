@@ -1,0 +1,1071 @@
+﻿@model StarLive.DAL.Models.UploadModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Starapp</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/menu.css" rel="stylesheet">
+    <link href="~/Content/video-js.css" rel="stylesheet">
+
+    <style>
+
+        #desc ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+            #desc ul li {
+                display: inline-block;
+                padding: 0px 10px;
+            }
+
+        #menu_button {
+            border-radius: 0px !important;
+            padding: 6px 30px !important;
+            margin: 0px 5px !important;
+            font-family: sans-serif !important;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .fa-cloud {
+            left: -20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="comptition">
+        <div id="Sidenav" class="sidenav">
+            <ul>
+                <li><a class="pull-left lang" href="#">ENGLISH</a> <a href="javascript:void(0)" class="close-btn pull-right" onclick="closeNav()">Close <b>&times;</b></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li class="submenu">
+                    <a class="active" href="javascript:void(0)">Winners</a> <span class="caret pull-right"></span>
+                    <div class="menu-item" style="display: none;">
+
+
+                        <ul>
+                            <li>
+                                <a href="Singing_competitions_list_document.html">
+                                    <img src="~/images/music.png">
+                                    <span>Singing </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Dancer_competitions_list_document.html">
+                                    <img src="~/images/dance.png">
+                                    <span>Dancing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="actor_competitions_list_document.html">
+                                    <img src="~/images/entertainment.png">
+                                    <span>Acting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Musician_competitions_list_document.html">
+                                    <img src="~/images/music_2.png">
+                                    <span>Musician</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Model_competitions_list_document.html">
+                                    <img src="~/images/mdeling.jpg">
+                                    <span>Modeling</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#short_flim_cometions.html">
+                                    <img src="~/images/m3.png">
+                                    <span>Short Flim</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Special_competitions_list_document.html">
+                                    <img src="~/images/physcial.png">
+                                    <span>Special Talents</span>
+                                </a>
+                            </li>
+                            <li>
+
+
+                                <a href="#Scientist_competions.html">
+                                    <img src="~/images/scientist.png">
+                                    <span>Scientist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#StreetArtistsContest_cometions.html">
+                                    <img src="~/images/artist.png">
+                                    <span>Pet </span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+
+                    </div>
+                </li>
+
+                <!--
+                <li class="submenu"><a href="javascript:void(0)">Nominees</a> <span class="caret pull-right"></span>
+                    <div class="menu-item" style="display: none;">
+                        <ul>
+                            <li>
+                                <a href="nominees.html">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rank.html">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Rank</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 7</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://placehold.it/20x20">
+                                    <span>Nominee 9</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                -->
+                <li class="submenu">
+                    <a href="javascript:void()">Competition</a> <span class="caret pull-right"></span>
+                    <div class="menu-item" style="display: none;">
+
+                        <ul>
+                            <li>
+                                <a href="Singing_competitions_list_document.html">
+                                    <img src="~/images/music.png">
+                                    <span>Singing </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Dancer_competitions_list_document.html">
+                                    <img src="~/images/dance.png">
+                                    <span>Dancing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="actor_competitions_list_document.html">
+                                    <img src="~/images/entertainment.png">
+                                    <span>Acting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Musician_competitions_list_document.html">
+                                    <img src="~/images/music_2.png">
+                                    <span>Musician</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Model_competitions_list_document.html">
+                                    <img src="~/images/mdeling.jpg">
+                                    <span>Modeling</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#short_flim_cometions.html">
+                                    <img src="~/images/m3.png">
+                                    <span>Short Flim</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Special_competitions_list_document.html">
+                                    <img src="~/images/physcial.png">
+                                    <span>Special Talents</span>
+                                </a>
+                            </li>
+                            <li>
+
+
+                                <a href="#Scientist_competions.html">
+                                    <img src="~/images/scientist.png">
+                                    <span>Scientist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#StreetArtistsContest_cometions.html">
+                                    <img src="~/images/artist.png">
+                                    <span>Pet </span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </li>
+                <!--<li><a href="video-upload.html">Top Videos</a></li>-->
+
+                <li class="submenu">
+                    <a href="javascript:void()">Mentors</a> <span class="caret pull-right"></span>
+                    <div class="menu-item" style="display: none;">
+
+                        <ul>
+                            <li>
+                                <a href="Singing_competitions_list_document.html">
+                                    <img src="~/images/music.png">
+                                    <span>Singing </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Dancer_competitions_list_document.html">
+                                    <img src="~/images/dance.png">
+                                    <span>Dancing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="actor_competitions_list_document.html">
+                                    <img src="~/images/entertainment.png">
+                                    <span>Acting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Musician_competitions_list_document.html">
+                                    <img src="~/images/music_2.png">
+                                    <span>Musician</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Model_competitions_list_document.html">
+                                    <img src="~/images/mdeling.jpg">
+                                    <span>Modeling</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#short_flim_cometions.html">
+                                    <img src="~/images/m3.png">
+                                    <span>Short Flim</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Special_competitions_list_document.html">
+                                    <img src="~/images/physcial.png">
+                                    <span>Special Talents</span>
+                                </a>
+                            </li>
+                            <li>
+
+
+                                <a href="#Scientist_competions.html">
+                                    <img src="~/images/scientist.png">
+                                    <span>Scientist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#StreetArtistsContest_cometions.html">
+                                    <img src="~/images/artist.png">
+                                    <span>Pet </span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </li>
+
+
+
+                <!-- <li class="submenu"><a href="javascript:void()">Booth</a> <span class="caret pull-right"></span>
+                     <div class="menu-item" style="display: none;">
+                         <ul>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 1</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 2</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 3</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 4</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 5</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 6</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 7</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 8</span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="Booth.html">
+                                     <img src="http://placehold.it/20x20">
+                                     <span>Booth 9</span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+
+                 -->
+                <li><a href="#">How it works</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="winner" id="wrapper">
+
+            <div class="page-content-wrapper">
+                <nav id="mainNav" class="navbar navbar-default ">
+                    <div class="container-fluid cutterspace nav-container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header cutterspace col-xs-5 col-md-3 col-sm-5">
+                            <button type="button" onclick="openNav()" class="hamburger is-closed menu-toggle">
+                                <span class="menu-txt">MENU</span>
+                                <span class="hamb-top"></span>
+                                <span class="hamb-middle"></span>
+                                <span class="hamb-bottom"></span>
+                            </button>
+                            <div id="wrap">
+                                <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+                            </div>
+                        </div>
+                        <div class="logo-container col-xs-12"><a href="home.html" class="logo"> <img src="~/images/logo_1.png">  </a></div>
+                        <div class="col-xs-4 col-md-6 col-sm-5 pull-right cutterspace">
+                            <a href="@Url.Action("Upload","Home")" class="header-upload-btn pull-right hidden-xs hidden-sm"><i class="fa fa-upload" aria-hidden="true"></i> UPLOAD YOUR TALENT</a>
+                            @if (Session["username"] == null)
+                            {
+                                <span class="pull-right login-sec hidden-xs hidden-sm"><h6>ARE YOU MEMBER? </h6> <a href="#" id="register" data-toggle="modal" data-target="#loginmodel">REGISTER</a>/<a href="#" data-toggle="modal" id="login" data-target="#loginmodel">LOGIN</a></span>
+                            }
+                        </div>
+
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+                <div class="container-fluid no-padding">
+                    <!--- <div class="col-md-12 no-padding sub-menu hidden-xs">
+                          <ul class="filter-list filter-menu">
+                          <li><a class="no-border" href="">ALL</a></li>
+                           <li class="active">
+                              <div class="no-border" class="form-group">
+                                 <select class="form-control" id="category">
+                                    <option>competition</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                 </select>
+                              </div>
+                           </li>
+                           <li><a class="no-border" href="">live</a></li>
+                           <li><a class="no-border" href="">upcoming</a></li>
+                           <li><a class="no-border" href="">previous</a></li>
+                           </ul>
+                         <div class="pull-right no-border" id="wrap">
+                              <input id="sub-search" name="sub-search" type="text" placeholder="What're we looking for ?">
+                              <input id="sub-search_submit" value="Rechercher" type="submit">
+                          </div>
+                     </div>--->
+                    <!---   <div class="winner-section">
+                            <div class="col-md-6 left-container">
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                         <div class="col-md-6 right-container">
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                            </div>
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                            </div>
+                                         </div>
+                                         <div class="col-md-6 left-container">
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                         <div class="col-md-6 right-container">
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                            </div>
+                                            <div class="slider-lg-container">
+                                               <span class="top-icon"><img src="~/images/cup.png" alt=""/></span>
+                                               <div class="col-md-5 cutterspace">
+                                                  <div class="details">
+                                                     <span class="title">Create a typographic<br /> letter for a sign-progress</span>
+                                                     <span class="post-date">Posted May 5th 2017</span>
+                                                     <span class="entries">17 entries</span>
+                                                     <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 17000</span>
+                                                     <span class="close-date">Entries will close in <img src="~/images/calender.png" alt=""></span>
+                                                     </span>
+                                                  </div>
+                                               </div>
+                                               <div class="col-md-7 cutterspace">
+                                                  <img class="winnerimg" src="~/images/winners1.jpg" alt="">
+                                               </div>
+                                            </div>
+                                         </div>
+
+                        </div>---->
+
+
+
+                    <div class="col-md-12 no-padding sub-menu hidden-xs">
+
+
+                        <a href="@Url.Action("Index","Home")">
+
+                            <button type="button" class="btn btn-danger pull-left" id="backtobutton">
+                                <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+                                back to  home
+                            </button>
+                        </a>
+
+                        <ul class="filter-list">
+
+                            <li>
+                                <a class="no-border" href="">
+                                    <img src="~/images/serarch_icon.png" alt="starapplive">
+                                </a>
+                            </li>
+                            <!-- <li class="active">
+                                 <div class="no-border" class="form-group">
+                                     <select class="form-control" id="category">
+                                         <option>Mentors</option>
+                                         <option>1</option>
+                                         <option>2</option>
+                                         <option>3</option>
+                                         <option>4</option>
+                                     </select>
+                                 </div>
+                             </li>-->
+
+
+                            <li><a class="no-border" href="Singing_competitions_list_document.html">Singer</a></li>
+                            <li><a class="no-border active" href="Dancer_competitions_list_document.html">Dancer</a></li>
+                            <li><a class="no-border" href="actor_competitions_list_document.html">Actor</a></li>
+                            <li><a class="no-border" href="Musician_competitions_list_document.html">Musician</a></li>
+
+                            <li><a class="no-border" href="#Musician_competitions_list_document.html">Director</a></li>
+                            <li><a class="no-border" href="Model_competitions_list_document.html">Model</a></li>
+                            <li><a class="no-border" href="Special_competitions_list_document.html">Special</a></li>
+
+
+                        </ul>
+                        <div class="pull-right no-border" id="wrap">
+                            <input id="sub-search" name="sub-search" type="text" placeholder="What're we looking for ?">
+                            <input id="sub-search_submit" value="Rechercher" type="submit">
+                        </div>
+                    </div>
+
+
+                    <div class="bottom-layer">
+                        <div class="container-fluid">
+                            <div class="col-md-8 col-sm-12 col-xs-12">
+                                <div class="overview-container">
+                                    <div class="title">
+                                        <img src="~/images/searchpng.png" alt="" />
+                                        <h3>Top Star video</h3>
+                                    </div>
+                                    <div class="desc" id="desc" style="margin-top:20px;">
+
+
+
+
+                                        <video width="100%" height="300" controls autoplay>
+                                            @*<source src="~/video/Dance 2.mp4" type="video/mp4">*@
+                                            <source src="@Model.URL" type="video/mp4">
+
+
+                                        </video>
+
+                                        <div class="video_bottom">
+
+
+                                            <h2>@Model.Title</h2>
+                                            <!--
+                                            <div class="slider-lg-container">
+
+
+                                            <ul>
+                                                <li><a href="#"><img src="~/images/round.png" alt=""></a></li>
+                                                 <li><a href="#"><img src="~/images/round.png" alt=""></a></li>
+                                                  <li><a href="#"><img src="~/images/round.png" alt=""></a></li>
+                                                   <li><a href="#"><img src="~/images/round.png" alt=""></a></li>
+                                            </ul>
+
+                                            </div>-->
+                                            <div class="video_right">
+                                                <img src="~/images/round_1.png" alt="round_1">
+                                                <img src="~/images/round_2.png" alt="round_2">
+                                                <img src="~/images/round_3.png" alt="round_1">
+                                                <img src="~/images/round_4.png" alt="round_1">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="video_bottom">
+                                            <span class="ajith_new"><img src="~/images/circle_aith.png" alt=""> &nbsp;&nbsp;Aith kumar </span>
+                                            <div class="video_right">
+                                                <img src="~/images/circle_aith.png" alt="">
+                                                <img src="~/images/circle_aith.png" alt="">
+                                                <img src="~/images/circle_aith.png" alt="">
+                                                <img src="~/images/circle_aith.png" alt="">
+                                                <span class="number">+15</span>
+
+                                                <img src="~/images/round_5.png" alt="round_1">
+                                            </div>
+                                        </div>
+                                        <p>@Model.Description</p>
+                                        <button type="button" class="btn btn-default" id="menu_button">Singing</button>
+                                        <button type="button" class="btn btn-default" id="menu_button">Dancing</button>
+
+                                        <button type="button" class="btn btn-default" id="menu_button">Acting</button>
+                                        <button type="button" class="btn btn-default" id="menu_button">Music </button>
+
+                                        <button type="button" class="btn btn-default" id="menu_button">Modeling</button>
+                                        <button type="button" class="btn btn-default" id="menu_button">Short Flim</button>
+                                        <span>
+                                            <h3>COMMENTS</h3>
+                                        </span>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="~/images/baby.png" class="media-object" style="width:45px">
+                                            </div>
+                                            <div class="media-body">
+
+
+                                                <span class="coner">
+                                                    <input type="text" placeholder="Commentting publicly as SELVA KUMAR">
+                                                </span>
+
+
+                                                <div class="video_bottom">
+                                                    <h5>By completing this action you are creating a <span style="color:#3bb2f6">channel </span>and agree to <span style="color:#3bb2f6">Terms of service</span>.</h5>
+                                                    <div class="video_right">
+                                                        <button type="button" class="btn btn-default" id="cancel_button">cancel</button>
+                                                        <button type="button" class="btn btn-default" id="comment_button">comment</button>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        Top Comments
+                                                        <span class="caret"></span>
+                                                    </button>
+
+                                                </div>
+
+                                                <!-- Nested media object -->
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <img src="~/images/r.png" class="media-object" style="width:45px">
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading">Rohan kothari <small><i>5 minutes ago</i></small></h4>
+                                                        <p styel="color:#20211c;">huge respect for kabali, the greatest superstar ever:).</p>
+                                                        <!-- Nested media object -->
+                                                        <div class="video_bottom_1">
+                                                            <p> Reply -  </p>
+
+                                                            <p style="color:#3bb2f6;"> 12  </p>
+
+
+                                                            <img src="~/images/left_hand.png" alt="">
+                                                            <img src="~/images/right_hand.png" alt="">
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Nested media object -->
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <img src="~/images/j.png" class="media-object" style="width:45px">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading">Jatinder Banga <small><i>5 minutes ago </i></small></h4>
+
+
+                                                            <p styel="color:#20211c;">My dog behave like lion after listing this.</p>
+                                                            <div class="video_bottom_1">
+                                                                <p> Reply -  </p>
+
+                                                                <p style="color:#3bb2f6;"> 12  </p>
+
+
+                                                                <img src="~/images/left_hand.png" alt="">
+                                                                <img src="~/images/right_hand.png" alt="">
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <img src="~/images/caps.png" class="media-object" style="width:45px">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading">NuNu <small><i> 6 months ago </i></small></h4>
+
+
+                                                            <p styel="color:#20211c;">This flim is so viral and all the corner of the world know this movie well as malayali.</p>
+                                                            <div class="video_bottom_1">
+                                                                <p> Reply -  </p>
+
+                                                                <p style="color:#3bb2f6;"> 12  </p>
+
+
+                                                                <img src="~/images/left_hand.png" alt="">
+                                                                <img src="~/images/right_hand.png" alt="">
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <img src="~/images/media_man.png" class="media-object" style="width:45px">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading">Anas Siddiqui <small><i>6 month ago </i></small></h4>
+
+
+                                                            <p styel="color:#20211c;">Possibly the best Indian Theme Song Ever !!!.</p>
+                                                            <div class="video_bottom_1">
+                                                                <p> Reply -  </p>
+
+                                                                <p style="color:#3bb2f6;"> 13  </p>
+
+
+                                                                <img src="~/images/left_hand.png" alt="">
+                                                                <img src="~/images/right_hand.png" alt="">
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <!--<div class="aside-container">
+                                    <img class="img-responsive aside-banner" src="http://placehold.it/380x150" alt="" />
+                                </div>-->
+                                <div class="aside-container">
+                                    <a class="btn btn-default upload-blue"><i class="fa fa-cloud" aria-hidden="true"></i>  VOTE NOW</a>
+                                    <div class="COMMENT" style="margin-top:30px;">
+
+                                        <a class="btn btn-default upload-blue"><i class="fa fa-cloud" aria-hidden="true"></i>  COMMENT</a>
+
+                                    </div>
+                                </div>
+                                <div class="aside-container1">
+                                    <div class="title">
+                                        <h3>RELETED VIDEOS</h3>
+                                    </div>
+                                    <div class="inner-container">
+
+
+                                        <div class="video_play_icons">
+                                            <video width="100" height="100" controls>
+                                                <source src="~/video/Dance 2.mp4" type="video/mp4">
+
+                                            </video>
+                                        </div>
+                                        <div class="inner-details">
+                                            <span class="inner-title">Amit Gupta an Engineer Engineer Engineer</span>
+                                            <span class="innerbr"><i class="fa fa-star" aria-hidden="true"></i> 10 saved stars</span>
+                                            <span><i class="fa fa-cloud" aria-hidden="true"></i> 7 Submissions</span>
+                                        </div>
+                                        <img class="innerprofile-pic" src="~/images/man_aith.png" alt="" />
+                                    </div>
+                                    <div class="inner-container">
+                                        <div class="video_play_icons">
+                                            <video width="100" height="100" controls>
+                                                <source src="~/video/act e 3.mp4" type="video/mp4">
+
+                                            </video>
+                                        </div>
+                                        <div class="inner-details">
+                                            <span class="inner-title">Amit Gupta an Engineer Engineer Engineer</span>
+                                            <span class="innerbr"><i class="fa fa-star" aria-hidden="true"></i> 10 saved stars</span>
+                                            <span><i class="fa fa-cloud" aria-hidden="true"></i> 7 Submissions</span>
+                                        </div>
+                                        <img class="innerprofile-pic" src="~/images/man_aith.png" alt="" />
+
+
+
+                                    </div>
+                                    <div class="inner-container">
+                                        <div class="video_play_icons">
+                                            <video width="100" height="100" controls>
+                                                <source src="~/video/Com in 4.mp4" type="video/mp4">
+
+                                            </video>
+                                        </div>
+                                        <div class="inner-details">
+                                            <span class="inner-title">Amit Gupta an Engineer Engineer Engineer</span>
+                                            <span class="innerbr"><i class="fa fa-star" aria-hidden="true"></i> 10 saved stars</span>
+                                            <span><i class="fa fa-cloud" aria-hidden="true"></i> 7 Submissions</span>
+                                        </div>
+                                        <img class="innerprofile-pic" src="~/images/man_aith.png" alt="" />
+                                    </div><div class="inner-container">
+
+
+                                        <div class="video_play_icons">
+                                            <video width="100" height="100" controls>
+                                                <source src="~/video/mm in 3.mp4" type="video/mp4">
+
+                                            </video>
+                                        </div>
+
+                                        <div class="inner-details">
+                                            <span class="inner-title">Amit Gupta an Engineer Engineer Engineer</span>
+                                            <span class="innerbr"><i class="fa fa-star" aria-hidden="true"></i> 10 saved stars</span>
+                                            <span><i class="fa fa-cloud" aria-hidden="true"></i> 7 Submissions</span>
+                                        </div>
+                                        <img class="innerprofile-pic" src="~/images/man_aith.png" alt="" />
+                                    </div>
+                                    <div class="inner-container">
+                                        <div class="video_play_icons">
+                                            <video width="100" height="100" controls autoplay>
+                                                <source src="~/video/mu in 1.mp4" type="video/mp4">
+
+                                            </video>
+
+                                        </div>			<div class="inner-details">
+                                            <span class="inner-title">Amit Gupta an Engineer Engineer Engineer</span>
+                                            <span class="innerbr"><i class="fa fa-star" aria-hidden="true"></i> 10 saved stars</span>
+                                            <span><i class="fa fa-cloud" aria-hidden="true"></i> 7 Submissions</span>
+                                        </div>
+                                        <img class="innerprofile-pic" src="~/images/man_aith.png" alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div id="footer" class="footer-section">
+                        <div class="container-fluid">
+                            <div class="col-md-5">
+                                <ul class="list-unstyled logo-sec-list">
+                                    <li>
+
+                                        <a href="home.html">
+                                            <img src="~/images/f-logo.png" alt="Star rating" />
+                                        </a>
+                                    </li>
+                                    <li><span>Starrate is an ever growing library of helpful, fun design briefs in various categories to help you improve your design skills.</span></li>
+                                    <li>
+                                        <a href="#"><img src="~/images/gplus.png" alt="Star rating" /></a>
+                                        <a href="#"><img src="~/images/facebook.png" alt="Star rating" /></a>
+                                        <a href="#"><img src="~/images/twitter.png" alt="Star rating" /></a>
+                                    </li>
+                                    <li><span>&copy; starrate Ltd. 2019. All Rights reserved</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="menu-title">MENU LIST</span>
+                                <ul class="list-unstyled">
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="new-winners.html">Winners</a></li>
+                                    <li><a href="nominees.html">Nominees</a></li>
+                                    <li><a href="profile.html">Stars</a></li>
+                                    <li><a href="mentors.html">Mentors</a></li>
+                                    <li><a href="#">How it works</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 ">
+                                <a href="#" class="newsletter-sec">JOIN OUR EMAIL NEWSLETTER <img src="~/images/env.png" class="pull-right" alt="Star rating" /></a>
+                                <div class="blog-section">
+                                    <img src="~/images/footer-blog.png" class="pull-left" alt="" />
+                                    <div class="blog-content">
+                                        <span class="f-title">Over at the blog:</span>
+                                        <span>Get type, lettering and font inspiration</span>
+                                        <a href="#" class="btn read-btn">Read Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- jQuery -->
+                <script src="~/Scripts/jquery.min.js"></script>
+                <!-- Bootstrap Core JavaScript -->
+                <script src="~/Scripts/bootstrap.min.js"></script>
+                <script src="~/Scripts/functionalscript.js"></script>
+                <script type="text/javascript">
+    function openNav() {
+                        document.getElementById("wrapper").style.marginLeft = "250px";
+                        document.getElementById("Sidenav").style.width = "250px";
+                        document.getElementById("overlay").style.display = "block";
+
+                        if (window.innerWidth <= 767) {
+                            document.getElementById("wrapper").style.marginLeft = "170px";
+                            document.getElementById("Sidenav").style.width = "170px";
+                        }
+                    }
+
+                    function closeNav() {
+                        document.getElementById("wrapper").style.marginLeft = "0";
+                        document.getElementById("Sidenav").style.width = "0";
+                        document.getElementById("overlay").style.display = "none";
+
+                    }</script>
+</body>
+</html>

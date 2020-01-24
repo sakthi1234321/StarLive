@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>StartApplive</title>
+    <!-- Bootstrap Core CSS -->
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/responsive.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/menu.css" rel="stylesheet">
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('overlay').onclick = function () {
+
+                closeNav();
+            };
+        };</script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".menu-item").click(function () {
+                window.menu - item();
+            });
+        });</script>
+</head>
+<body>
+    <div class="overlay" id="overlay" style="display: none;"></div>
+    <!-- Sidebar -->
+    <div id="Sidenav" class="sidenav">
+        <ul>
+            <li><a class="pull-left lang" href="#">ENGLISH</a> <a href="javascript:void(0)" class="close-btn pull-right" onclick="closeNav()">Close <b>&times;</b></a></li>
+            <li><a class="active" href="home.html">Home</a></li>
+            <li class="submenu">
+                <a href="javascript:void(0)">Winners</a> <span class="caret pull-right"></span>
+                <div class="menu-item" style="display: none;">
+
+
+
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Singer", "Competition")">
+                                <img src="~/images/music.png">
+                                <span>Singing </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Dancer", "Competition")">
+                                <img src="~/images/dance.png">
+                                <span>Dancing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Actor", "Competition")">
+                                <img src="~/images/entertainment.png">
+                                <span>Acting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Musician", "Competition")">
+                                <img src="~/images/music_2.png">
+                                <span>Musician</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Model", "Competition")">
+                                <img src="~/images/mdeling.jpg">
+                                <span>Modeling</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ShortFlim", "Competition")">
+                                <img src="~/images/m3.png">
+                                <span>Short Flim</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("SpecialTalent", "Competition")">
+                                <img src="~/images/physcial.png">
+                                <span>Special Talents</span>
+                            </a>
+                        </li>
+                        <li>
+
+
+                            <a href="@Url.Action("Scientist", "Competition")">
+                                <img src="~/images/scientist.png">
+                                <span>Scientist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Pet", "Competition")">
+                                <img src="~/images/artist.png">
+                                <span>Pet </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="submenu">
+                <a href="javascript:void()">Competition</a> <span class="caret pull-right"></span>
+                <div class="menu-item" style="display: none;" onclick="window.close();">
+
+
+
+                    <ul>
+                        <li>
+                            <a href="Singing_competitions_list_document.html">
+                                <img src="~/images/music.png">
+                                <span>Singing </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Dancer_competitions_list_document.html">
+                                <img src="~/images/dance.png">
+                                <span>Dancing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="actor_competitions_list_document.html">
+                                <img src="~/images/entertainment.png">
+                                <span>Acting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Musician_competitions_list_document.html">
+                                <img src="~/images/music_2.png">
+                                <span>Musician</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Model_competitions_list_document.html">
+                                <img src="~/images/mdeling.jpg">
+                                <span>Modeling</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="short_flim_cometions_document.html">
+                                <img src="~/images/m3.png">
+                                <span>Short Flim</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Special_competitions_list_document.html">
+                                <img src="~/images/physcial.png">
+                                <span>Special Talents</span>
+                            </a>
+                        </li>
+                        <li>
+
+
+                            <a href="scientice_competion_document.html">
+                                <img src="~/images/scientist.png">
+                                <span>Scientist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pet_competions_document.html">
+                                <img src="~/images/artist.png">
+                                <span>Pet </span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+
+
+                </div>
+            </li>
+            <!-- <li><a href="video-upload.html">Top Videos</a></li>-->
+            <li class="submenu">
+                <a href="javascript:void()">Mentors</a> <span class="caret pull-right"></span>
+                <div class="menu-item" style="display: none;">
+
+
+                    <ul>
+                        <li>
+                            <a href="Singing_competitions_list_document.html">
+                                <img src="~/images/music.png">
+                                <span>Singing </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Dancer_competitions_list_document.html">
+                                <img src="~/images/dance.png">
+                                <span>Dancing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="actor_competitions_list_document.html">
+                                <img src="~/images/entertainment.png">
+                                <span>Acting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Musician_competitions_list_document.html">
+                                <img src="~/images/music_2.png">
+                                <span>Musician</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Model_competitions_list_document.html">
+                                <img src="~/images/mdeling.jpg">
+                                <span>Modeling</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="short_flim_cometions_document.html">
+                                <img src="~/images/m3.png">
+                                <span>Short Flim</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Special_competitions_list_document.html">
+                                <img src="~/images/physcial.png">
+                                <span>Special Talents</span>
+                            </a>
+                        </li>
+                        <li>
+
+
+                            <a href="scientice_competion_document.html">
+                                <img src="~/images/scientist.png">
+                                <span>Scientist</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pet_competions_document.html">
+                                <img src="~/images/artist.png">
+                                <span>Pet </span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </li>
+
+            <li><a href="#profile-workspace.html">How it works</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </div>
+    @RenderBody()
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--/row-->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div id="footer" class="footer-section">
+        <div class="container-fluid">
+            <div class="col-md-5">
+                <ul class="list-unstyled logo-sec-list">
+                    <li>
+                        <a href="home.html">
+                            <img src="~/images/f-logo.png" alt="Star rating" />
+                        </a>
+                    </li>
+                    <li><span>Starrate is an ever growing library of helpful, fun design briefs in various categories to help you improve your design skills.</span></li>
+                    <li>
+                        <a href="#"><img src="~/images/gplus.png" alt="Star rating" /></a>
+                        <a href="#"><img src="~/images/facebook.png" alt="Star rating" /></a>
+                        <a href="#"><img src="~/images/twitter.png" alt="Star rating" /></a>
+                    </li>
+                    <li><span>&copy; starrate Ltd. 2019. All Rights reserved</span></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <span class="menu-title">MENU LIST</span>
+                <ul class="list-unstyled">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="new-winners.html">Winners</a></li>
+                    <li><a href="nominees.html">Nominees</a></li>
+                    <li><a href="profile.html">Stars</a></li>
+                    <li><a href="mentors.html">Mentors</a></li>
+                    <li><a href="#">How it works</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5 ">
+                <a href="#" class="newsletter-sec">JOIN OUR EMAIL NEWSLETTER <img src="~/images/env.png" class="pull-right" alt="Star rating" /></a>
+                <div class="blog-section">
+                    <img src="~/images/footer-blog.png" class="pull-left" alt="" />
+                    <div class="blog-content">
+                        <span class="f-title">Over at the blog:</span>
+                        <span>Get type, lettering and font inspiration</span>
+                        <a href="#" class="btn read-btn">Read Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model popup-->
+    <!-- Large modal -->
+    <div class="modal fade" id="loginmodel" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <img src="~/images/model-logo.png" class="img-responsive model-logo" alt="" />
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 cutterspace">
+                            <div id="form-section">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="login active"><a href="#Login" data-toggle="tab">Login</a></li>
+                                    <li class="reg"><a href="#Registration" data-toggle="tab">SIGN UP</a></li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="Login">
+                                        <div class="social-login">
+                                            <a href="#" class="fb-btn"><i class="fa fa-facebook pull-left" aria-hidden="true"></i> Continue with Facebook</a>
+                                            <a href="#" class="g-btn"><i class="fa fa-google-plus pull-left"></i> Continue with Google</a>
+                                            <a href="#" class="tw-btn"><i class="fa fa-twitter pull-left" aria-hidden="true"></i> Continue with Twitter</a>
+                                            <img src="~/images/or.png" class="center-block" alt="" />
+                                        </div>
+                                        <div class="login-form">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="username" placeholder="Enter your Mobile or Email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="loginpassword" placeholder="Password" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label><input type="checkbox"><span></span></label>
+                                                <label class="cus-label">Keep me signed in</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="#" onclick="login()" class="btn login-btn">LOGIN</a>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="text-center">Trouble logging in? <a href="javascript:void(0)" id="forget-pass">Forgot my password</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="Registration">
+                                        <form role="form" class="form-horizontal">
+                                            <div class="reg-form">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control registerusername" id="username" placeholder="User Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control" id="age-category">
+                                                        <option data-val="0" value="">Select your age category</option>
+                                                        @foreach (var item in ViewBag.UserType)
+                                                        {
+                                                            <option data-val="@item.Key" value="@item.Value">I am a junior (Below 13 years old)</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                                <div class="form-group below-thirteen" style="display: none;">
+                                                    <input type="text" class="form-control" id="parentname" placeholder="Parent or Guardian Name" />
+                                                </div>
+                                                <div class="form-group below-thirteen" style="display: none;">
+                                                    <input type="number" class="form-control" id="parentmobilenumber" placeholder="Parent or Guardian Mobile Number" />
+                                                </div>
+                                                <div class="form-group above-thirteen">
+                                                    <input type="number" class="form-control" id="mobilenumber" placeholder="Mobile Number" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" id="emailid" class="form-control" placeholder="Email ID" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" id="password" class="form-control" placeholder="Password" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="text-center form-text">By logging you are agreeing startrate <a href="#">Terms and Conditions</a></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="#" onclick="register()" class="btn login-btn">SIGN UP</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="forget-password" style="display:none;">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="" data-toggle="tab">FORGET PASSWORD?</a></li>
+                                </ul>
+                                <div class="tab-pane">
+                                    <div class="forgetpass">
+                                        <span>We will send a link on your registered email or One Time Password(OTP) on your mobile to reset your password.</span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter your Mobile or Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#" id="reset" class="btn reset-btn">RESET PASSWORD</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="reset-password" style="display:none;">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="" data-toggle="tab">RESET PASSWORD?</a></li>
+                                </ul>
+                                <div class="tab-pane">
+                                    <div class="forgetpass">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="New Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Confirm Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#" class="btn reset-btn">RESET PASSWORD</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model popup-->
+    </div>
+    </div>
+    <!-- footer -->
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/functionalscript.js"></script>
+    <script src="~/Scripts/user.js"></script>
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("wrapper").style.marginLeft = "250px";
+            document.getElementById("Sidenav").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+
+            if (window.innerWidth <= 767) {
+                document.getElementById("wrapper").style.marginLeft = "170px";
+                document.getElementById("Sidenav").style.width = "170px";
+            }
+        }
+
+        function closeNav() {
+            document.getElementById("wrapper").style.marginLeft = "0";
+            document.getElementById("Sidenav").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+
+        }</script>
+    @*<script type="text/javascript">
+            function register() {
+                var valid = true;
+                if ($(".registerusername").val() == "") {
+                    valid = false;
+                    alert("Enter Username!");
+                }
+                else if ($("#age-category").val() == "") {
+                    valid = false;
+                    alert("Select age-category!");
+                }
+                else if ($("#age-category").val() == "below-thirteen") {
+                    if ($("#parentname").val() == "") {
+                        valid = false;
+                        alert("Enter Parent or Guardian name!");
+                    }
+                    else if ($("#parentmobilenumber").val() == "") {
+                        valid = false;
+                        alert("Enter parent or Guardian mobile number!");
+                    }
+                }
+                else if ($("#age-category").val() == "above-thirteen") {
+                    if ($("#mobilenumber").val() == "") {
+                        valid = false;
+                        alert("Enter mobile number!");
+                    }
+                }
+                if ($("#emailid").val() == "") {
+                    valid = false;
+                    alert("Enter email address!");
+                }
+                else if ($("#password").val() == "") {
+                    valid = false;
+                    alert("Enter password!");
+                }
+                if (valid) {
+                    var model = {};
+                    model.UserName = $(".registerusername").val();
+                    model.UserTypeID = $("#age-category").val() == "below-thirteen" ? 1 : 2;
+                    if (model.UserTypeID == 1) {
+                        model.MobileNumber = $("#parentmobilenumber").val();
+                        model.ParentName = $("#parentname").val();
+                    }
+                    else {
+                        model.MobileNumber = $("#mobilenumber").val();
+                    }
+                    model.EmailAddress = $("#emailid").val();
+                    model.Password = $("#password").val();
+
+                    try {
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("Register", "Home")',
+                            data: JSON.stringify(model),
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (result) {
+                                if (result.Status)
+                                    alert("You have successfully registered!");
+                                else
+                                    alert(result.Message);
+                            },
+                            error: function (ex) {
+                                console.error(JSON.stringify(ex));
+                            }
+                        });
+                    } catch (e) {
+                        console.error(JSON.stringify(e));
+                    }
+                }
+            }
+
+        </script>*@
+</body>
+</html>

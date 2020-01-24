@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HALS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Calling Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Calling Favicon -->
+    <!-- ********************* -->
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/meanmenu.css" media="all">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" class="color-changing" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    
+    
+     <script src="js/timer.js"></script>
+    <style>
+        .main-menu li a {
+    font-size: 20px;
+    letter-spacing: .8px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 44px 0px;
+    color: black;
+     font-family:Roboto-Medium;
+}
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+.meet_stars ul  {
+     text-align:center;
+   display:inline-block;
+   width:100%;
+    
+    padding:30px 0px;
+}
+
+.main-menu li a.active {
+    color: #d00d03;
+}
+
+.meet_stars ul li{
+    text-align:center;
+   display:inline-block;
+   width:100%;
+    
+    padding:30px 0px;
+}
+
+.meet_stars {
+    text-align: center !important;
+    display:black;
+    width:;100%;
+}
+
+
+.custom-select {
+    border:0px;
+}
+.half_next_events p {
+    font-family: RobotoCondensed-Light;
+    font-size: 16px;
+    padding-top: 20px;
+    padding: 20px 190px;
+}
+
+    </style>
+</head>
+
+<body>
+   
+    <header>
+        <section class="top-header">
+           <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-5 col-sm-4 col-5">
+                    <div class="logo transition-4">
+                        <a href="index.html">
+                            <img src="img/logo/footer_logo.png" class="transition-4" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-8 col-7">
+                    <div class="icon-links d-flex align-items-center">
+                        <a href="#" class="shop-icon d-none d-sm-block">
+                            <!--<i class="fas fa-shopping-basket"></i>  -->
+                          <span style="letter-spacing: 4px;">BUY </span><br>
+                                <span>TICKETS
+                            </span>
+                        </a>
+                       <!-- <a href="#" class="search-icon d-none d-sm-block" data-toggle="modal" data-target="#searchModal">
+                            <i class="fas fa-search"></i>
+                        </a>-->
+                       <!-- <a href="#" class="btn btn-round d-none d-sm-block blob-small">CONTACT US</a>-->
+                    </div>
+                    <div class="menu-links">
+                        <nav class="main-menu white">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home 
+                                        <!--<i class="fas fa-angle-down"></i>   -->
+                                    </a>
+                                    <!--<ul class="submenu">
+                                        <li><a href="index.html">Home Page V1</a></li>
+                                        <li><a href="index-2.html">Home Page V2</a></li>
+                                        <li><a href="index-3.html">Home Page V3</a></li>
+                                    </ul>--->
+                                </li>
+                                <li>
+                                    <a href="about.html" class="active">About Us 
+                                        <!--<i class="fas fa-angle-down"></i>  -->
+                                    </a>
+                                   <!-- <ul class="submenu">
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li>
+                                            <a href="team.html" class="sub-2">Our Team</a>
+                                            <ul class="submenu">
+                                                <li><a href="team.html">Our Team V1</a></li>
+                                                <li><a href="team-2.html">Our Team V2</a></li>
+                                                <li><a href="team-3.html">Our Team V3</a></li>
+                                                <li><a href="team-detail.html">Team Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="clients.html">Partners</a></li>
+                                        <li>
+                                            <a href="career.html" class="sub-2">Career</a>
+                                            <ul class="submenu">
+                                                <li><a href="career.html">Career</a></li>
+                                                <li><a href="career-details.html">Career Detail</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="services.html" class="sub-2">Service</a>
+                                            <ul class="submenu">
+                                                <li><a href="services.html">Service V1</a></li>
+                                                <li><a href="services-2.html">Service V2</a></li>
+                                                <li><a href="services-details.html">Service Detail</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>--->
+                                </li>
+                                <li>
+                                    <a href="#services.html">SERVICES
+                                        <i class="fas fa-angle-down"></i>  
+                                    </a>
+                                    <ul class="submenu">
+                                        <li><a href="services.html">Film Abroad </a></li>
+                                       <li><a href="event_list.html">Event</a></li>
+                                        <!---<li><a href="portfolio-masonty.html">Portfolio Masonry</a></li>
+                                        <li><a href="portfolio-details.html">Portfolio Detail</a></li>  -->
+                                    </ul> 
+                                </li>
+                                <li class="active">
+                                    <a href="events.html">EVENTS
+                                    <!-- <i class="fas fa-angle-down"></i>  -->
+                                 </a>
+                                    <!--<ul class="submenu">
+                                        <li>
+                                            <a href="blog-listing-standared.html" class="sub-2">Blog Listing</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog-listing-standared-2.html">Blog Standared </a></li>
+                                                <li><a href="blog-listing-standared-left.html">Blog Standared Sidebar Left</a></li>
+                                                <li><a href="blog-listing-nosidebar.html">Blog Standared No Sidebar</a></li>
+                                                <li><a href="blog-listing-masonty.html">Blog Masonry</a></li>
+                                                <li><a href="blog-listing-grid.html">Blog Grid</a></li>
+                                                <li><a href="blog-listing-grid-sidebar.html">Blog Grid Sidebar</a></li>
+                                                <li><a href="blog-listing-grid-2.html">Blog Grid 2</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="blog-details-image.html" class="sub-2">Blog Details</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog-details-image.html">Blog Detail Image</a></li>
+                                                <li><a href="blog-details-slider.html">Blog Detail Slider</a></li>
+                                                <li><a href="blog-details-video.html">Blog Detail Video</a></li>
+                                                <li><a href="blog-details-no-sidebar.html">Blog Detail No Sidebar</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>  -->
+                                </li>
+                                <li>
+                                    <a href="contact.html">CONTACT US 
+                                        <!--<i class="fas fa-angle-down"></i>  -->
+                                    </a>
+                                    <!---<ul class="submenu">
+                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li>
+                                            <a href="pricing-1.html" class="sub-2">Pricing</a>
+                                            <ul class="submenu">
+                                                <li><a href="pricing-1.html">Price V1</a></li>
+                                                <li><a href="pricing-2.html">Price V2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="signup.html">Signup</a></li>
+                                        <li><a href="testimonials.html">Testimonials</a></li>
+                                        <li><a href="404.html">Error</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="thank-you.html">Thank You Page</a></li>
+                                        <li><a href="terms.html">Terms & Policy</a></li>
+                                    </ul>  --->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+    </header>
+
+    <div class="search-popup modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group relative">
+                            <input type="text" class="form-control input-search" id="search" placeholder="Search here...">
+                            <i class="fas fa-search transform-v-center"></i>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-times close-search-modal" data-dismiss="modal" aria-label="Close"></i>
+    </div>
+    <!-- Header end -->
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('img/banner/aboutbanner.png');" data-overlay="7">
+        <div class="container">
+            <div class="row z-5 align-items-center">
+                
+                  <div class="col-md-8">
+                           <div class="About_list_menu">
+                               
+                               <ul>
+                                   <li>We create impactful  </li>
+                                   <li>digital experiences  </li>
+                                    <li>that help people. </li>
+                               </ul>
+                               
+                               
+                               <p>
+                                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                 </p>
+                                 
+                                 </div>
+                               
+                </div>
+                
+                
+                 <div class="col-md-4">
+                               
+                               <div class="event_list_banner_left">
+                               <img src="img/banner/event_list_left.png" alt="event-list_left">
+                               </div>
+                           </div>
+                           
+                
+               <!-- <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>  --->
+            </div>
+        </div>
+    </section>
+    <!-- immer banner end -->
+
+  
+   
+
+
+
+ <!-- About us start -->
+    <section class="about-us pt-100 pb-100">
+        <div class="container">
+            <div class="row align-items-xl-center">
+              
+                <div class="col-lg-7">
+                    <div class="about-text mt-md-60 text-center text-lg-left wow fadeInRight">
+                        <div class="fancy-head left-al  mb-10">
+                             <div class="events_heading">
+                            <h2>About us</h2>
+                            <ul>
+                           <li>We Equip growing compaines </li>
+<li>with outstanding digital</li>
+<li>products and experiences</li>
+</ul>
+
+                              <p>
+                                  Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                              </p>
+
+                             
+                              
+
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+
+                  <div class="col-lg-5">
+                    <div class="fadeInLeft">
+                        <img src="img/banner/about.png" alt="">
+                       
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- About us end -->
+
+
+
+  
+ <section class="about_wrapper" id="about_camera_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                      <div class="about_what_content">
+                    <div class="singer_wrapper_contents">
+                        <h2>What we do</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industr
+y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
+
+<p> when an unknown printer took a galley of type and scrambled it to make a type specimen 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                       
+                       
+                       
+                       <img src="img/banner/about_camera.png" alt="">
+                    </div>
+                </div>
+                
+                </div>
+
+                <div class="col-md-5">
+                    <div class="signger_right pull-right">
+                    <img src="img/banner/about_sec_2.png" alt="mg">
+                    
+                    </div>
+
+
+
+                  <div class="about_what_menu">
+                      <ul>
+                          <li><img src="img/banner/rectagular.png" alt="mg"> Brand Strategy</li>
+                            <li><img src="img/banner/rectagular.png" alt="mg"> Copywriting</li>
+                            
+                              <li> <img src="img/banner/rectagular.png" alt="mg"> Naming</li>
+                              
+                                <li><img src="img/banner/rectagular.png" alt="mg"> Brand Strategy</li>
+                                
+                                
+                                 <li><img src="img/banner/rectagular.png" alt="mg"> Print design</li>
+                              
+                                <li><img src="img/banner/rectagular.png" alt="mg"> Brand Strategy</li>
+                      </ul>
+                  </div>
+                  
+                  
+                   
+                  
+                  
+
+                </div>
+            </div>
+
+                
+                
+                
+               
+            </div>
+        </div>
+    </section>
+
+
+<section class="services bg-light-white pt-95 pb-70 bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="half_next_events">
+                     
+                        <h2>our team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p>
+                    </div>
+                    
+                    
+                    
+                  
+                    
+                    
+                </div>
+                
+                
+                
+                <div class="col-md-3">
+                    <div class="team">
+                    <img src="img/banner/team1.png" alt="mg">
+                    
+                    <div class="team_content">
+                        <h2>Natasha Rorel</h2>
+                        <h3>General Manager</h3>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              
+              
+              
+              
+                <div class="col-md-3">
+                    <div class="team">
+                    <img src="img/banner/team2.png" alt="mg">
+                    
+                    <div class="team_content">
+                        <h2>Jack Larson</h2>
+                        <h3>Finance Manager</h3>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              
+              
+              
+                <div class="col-md-3">
+                    <div class="team">
+                    <img src="img/banner/team3.png" alt="mg">
+                    
+                    <div class="team_content">
+                        <h2>Emily Parker</h2>
+                        <h3>Marketing Head</h3>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              
+              
+              
+                <div class="col-md-3">
+                    <div class="team">
+                    <img src="img/banner/team4.png" alt="mg">
+                    
+                    <div class="team_content">
+                        <h2>Jason Lerkov</h2>
+                        <h3>Design Manager</h3>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              
+            
+               
+            </div>
+
+
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+
+
+
+
+
+<section class="Our_Event">
+    <div class="container">
+                  <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="half_next_events">
+                     
+                        <h2>Star talks</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    
+                      <a href="events.html"> 
+                    <div class="gallery">
+                    <img src="img/banner/gallery1.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                </a>
+                
+                
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                  <div class="col-md-6">
+                      
+                        <a href="events.html"> 
+                    <div class="gallery">
+                    <img src="img/banner/gallery2.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live  <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 160sr   <br><span>closed</span></li>
+                       
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                
+                </a>
+                 </div>
+                 
+                 
+                  </div>
+              
+                 
+                 
+                 
+                       <div class="row">
+                 
+                   <div class="col-md-6">
+                         <a href="events.html"> 
+                    <div class="gallery">
+                    <img src="img/banner/gallery3.png" alt="">
+                    
+                   <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+                </a>
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                   <div class="col-md-6">
+                       
+                       <a href="events.html"> 
+                    <div class="gallery">
+                    <img src="img/banner/gallery4.png" alt="">
+                    
+                     <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live  <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 160sr   <br><span>closed</span></li>
+                       
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    </div>
+                    </a>
+                    
+                </div>
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+        </div>
+    </div>
+</section>
+   
+
+
+<section class="footer_wrapper">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer_logo">
+      <img src="img/logo/footer_logo.png" alt="" class="footer_logo_sec">
+      <p>copyright    &copy;      2019</p>
+
+       <h6>All Rights Reserved.</h6>
+      </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="footer-right_banner">
+                <img src="img/team/social_icons.png" alt="footer">
+             </div>
+        </div>
+         </div>
+
+          </div>
+      
+
+    </footer>
+
+
+
+    </section>
+
+   
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/lightslider.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- JS Files end -->
+</body>
+
+
+<!-- Mirrored from vs-themes.co.in/bizz/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 05:38:29 GMT -->
+</html>

@@ -1,0 +1,428 @@
+﻿<div id="wrapper">
+
+    <div class="page-content-wrapper">
+        <!-- navbar-fixed-top -->
+
+
+        <nav id="mainNav" class="navbar navbar-default ">
+            <div class="container-fluid cutterspace nav-container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header cutterspace col-xs-5 col-md-3 col-sm-5">
+                    <button type="button" onclick="openNav()" class="hamburger is-closed menu-toggle">
+                        <span class="menu-txt">MENU</span>
+                        <span class="hamb-top"></span>
+                        <span class="hamb-middle"></span>
+                        <span class="hamb-bottom"></span>
+                    </button>
+                    <div id="wrap">
+                        <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+                    </div>
+                </div>
+                <div class="logo-container col-xs-12"><a href="home.html" class="logo"> <img src="~/images/logo_1.png">  </a></div>
+                <div class="col-xs-4 col-md-6 col-sm-5 pull-right cutterspace">
+                    <a href="@Url.Action("Upload","Home")" class="header-upload-btn pull-right hidden-xs hidden-sm"><i class="fa fa-upload" aria-hidden="true"></i> UPLOAD YOUR TALENT</a>
+                    @if (Session["username"] == null)
+                    {
+                        <span class="pull-right login-sec hidden-xs hidden-sm"><h6>ARE YOU MEMBER? </h6> <a href="#" id="register" data-toggle="modal" data-target="#loginmodel">REGISTER</a>/<a href="#" data-toggle="modal" id="login" data-target="#loginmodel">LOGIN</a></span>
+                    }
+                </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <div class="banner-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <video poster="~/images/banner.png">
+                            <source src="" type="video/mp4">
+                            <source src="" type="video/ogg">
+                        </video>
+                        <img src="~/images/btm-banner.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-section">
+
+
+
+            <!-- Top videos ends -->
+            <!-- recent competition starts -->
+            <div class="container comp-section">
+                <div class="col-md-12">
+                    <h3 class="stars-tilte"> COMPETITIONS</h3>
+                    <p class="stars-desc">This is one of the most exhilarating, captivating and stimulating dance competitions. If anyone has dance talent then take this opportunity to make your dance talent globalized.  so let’s participate Now.</p>
+                    <div id="compcarousel" class="carousel slide">
+                        <ol class="carousel-indicators pull-right">
+                            <li data-target="#compcarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#compcarousel" data-slide-to="1"></li>
+                            <li data-target="#compcarousel" data-slide-to="2"></li>
+                            <li data-target="#compcarousel" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-6 left-container">
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/music.png" alt="" /></span>
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="#" data-name="singing" onclick="loginorredirect()">
+                                                    <img class="competition-img" src="~/images/Singing_Contest_Hindi.png" alt="">
+                                                </a>
+                                                <div class="details">
+                                                    <span class="title">Singing Contest<br /> English</span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+                                                    <div class="competion">
+                                                        <span>Entries <br> 320</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 20000
+                                                        </span>
+
+                                                    </div>
+
+
+                                                    <span class="aw-details">
+
+
+                                                        <span class="close-date">
+                                                            Entries will close in <img src="~/images/calender.png" alt="">
+                                                            <a href="Singing_competitions_list_document.html">
+                                                                <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                            </a>
+                                                        </span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/dance.png" alt="" /></span>
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="Dancer_competitions_list_document.html">
+                                                    <img class="competition-img" src="~/images/10.png" alt="">
+                                                </a>
+                                                <div class="details">
+                                                    <span class="title">Dancing<br /> Tamil</span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+
+
+
+
+
+
+                                                    <div class="competion">
+                                                        <span>Entries <br> 220</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 50000
+                                                        </span>
+
+                                                    </div>
+                                                    <!-- <span class="aw-details">
+                                                     <span>Awarded To:</span>
+                                                     <span class="price"><img src="~/images/money.png" alt=""> 50000</span>-->
+                                                    <span class="close-date">
+                                                        Entries will close in <img src="~/images/calender.png" alt="">
+                                                        <a href="Dancer_competitions_list_document.html">
+                                                            <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                        </a>
+                                                    </span>
+                                                    </span>
+                                                </div>
+
+
+                                            </div>
+                                            <!--<div class="col-md-5 cutterspace">
+                                               <div class="details">
+                                                  <span class="title">Dancing<br /> Tamil</span>
+                                                  <span class="post-date">Posted May 5th 2019</span>
+
+
+
+
+
+
+                                                  <span class="entries">220 entries</span>
+                                                  <span class="aw-details">
+                                                  <span>Awarded To:</span>
+                                                  <span class="price"><img src="~/images/money.png" alt=""> 50000</span>
+                                                  <span class="close-date">Entries will close in <img src="~/images/calender.png" alt="">
+                                                       <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                  </span>
+                                                  </span>
+                                               </div>
+
+
+
+                                            </div>  -->
+
+                                        </div>
+
+
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/physcial.png" alt="" /></span>
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="Special_competitions_list_document.html">
+                                                    <img class="competition-img" src="~/images/post1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-12 cutterspace">
+                                                <div class="details">
+                                                    <span class="title">
+                                                        Special Talents
+
+
+
+
+
+                                                        <br /> physically Challenged
+                                                    </span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+
+                                                    <div class="competion">
+                                                        <span>Entries <br> 220</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 50000
+                                                        </span>
+
+                                                    </div>
+                                                    <!--<span class="entries">220 entries</span>
+                                                    <span class="aw-details">
+                                                    <span>Awarded To:</span>
+                                                    <span class="price"><img src="~/images/money.png" alt=""> 50000</span>-->
+                                                    <span class="close-date">
+                                                        Entries will close in <img src="~/images/calender.png" alt="">
+
+                                                        <a href="Special_competitions_list_document.html">
+                                                            <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                        </a>
+                                                    </span>
+                                                    </span>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+                                    </div>
+
+
+
+
+                                    <div class="col-md-6 right-container">
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/mdeling.jpg" alt="" /></span>
+                                            <!--  <div class="col-md-12 cutterspace">
+                                                 <div class="details">
+                                                    <span class="title">Female<br />model</span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+                                                    <span class="entries">300 entries</span>
+                                                    <span class="aw-details">
+                                                    <span>Awarded To:</span>
+                                                    <span class="price"><img src="~/images/money.png" alt=""> 50000</span>
+                                                    <span class="close-date">Entries will close in <img src="~/images/calender_short_flim.png" alt="">
+                                                         <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                    </span>
+                                                    </span>
+                                                 </div>
+
+
+
+
+                                              </div>   -->
+
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="Model_competitions_list_document.html">
+                                                    <img class="competition-img" src="~/images/female_model.png" alt="">
+                                                </a>
+                                                <div class="details">
+                                                    <span class="title">Female<br />model</span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+
+
+                                                    <div class="competion">
+                                                        <span>Entries <br> 300</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 50000
+                                                        </span>
+
+                                                    </div>
+                                                    <span class="aw-details">
+                                                        <!--<span>Awarded To:</span>
+                                                        <span class="price"><img src="~/images/money.png" alt=""> 50000</span>  -->
+                                                        <span class="close-date">
+                                                            Entries will close in <img src="~/images/calender_short_flim.png" alt="">
+
+                                                            <a href="Model_competitions_list_document.html">
+                                                                <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                            </a>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/m3.png" alt="" /></span>
+                                            <!--<div class="col-md-5 cutterspace">
+                                               <div class="details">
+                                                  <span class="title">Short Flim<br /> Tamil</span>
+                                                  <span class="post-date">Posted May 5th 2019</span>
+                                                  <span class="entries">17 entries</span>
+                                                  <span class="aw-details">
+                                                  <span>Awarded To:</span>
+                                                  <span class="price"><img src="~/images/money.png" alt=""> 20000</span>
+                                                  <span class="close-date">Entries will close in <img src="~/images/calender_short_flim.png" alt="">
+                                                       <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                  </span>
+                                                  </span>
+                                               </div>
+                                            </div>-->
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="short_flim_cometions_document.html">
+                                                    <img class="competition-img" src="~/images/sht.jpg" alt="">
+                                                </a>
+                                                <div class="details">
+                                                    <span class="title">Short Flim<br /> Tamil</span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+
+                                                    <div class="competion">
+                                                        <span>Entries <br> 17</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 20000
+                                                        </span>
+
+                                                    </div>
+
+                                                    <!-- <span class="entries">17 entries</span>   -->
+                                                    <span class="aw-details">
+
+                                                        <!--<span>Awarded To:</span>
+                                                         <span class="price"><img src="~/images/money.png" alt=""> 20000</span>  -->
+                                                        <span class="close-date">
+                                                            Entries will close in <img src="~/images/calender_short_flim.png" alt="starapp">
+
+                                                            <a href="short_flim_cometions_document.html">
+                                                                <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                            </a>
+                                                        </span>
+                                                    </span>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="slider-lg-container">
+                                            <span class="top-icon"><img src="~/images/artist.png" alt="" /></span>
+                                            <!--<div class="col-md-5 cutterspace">
+                                                                                      <div class="details">
+                                                                                         <span class="title">Street Artists <br>
+                                                                                            Contest
+
+
+                                            <br /> </span>
+                                                                                         <span class="post-date">Posted May 5th 2019</span>
+                                                                                         <span class="entries">17 entries</span>
+                                                                                         <span class="aw-details">
+                                                                                         <span>Awarded To:</span>
+                                                                                         <span class="price"><img src="~/images/money.png" alt=""> 20000</span>
+                                                                                         <span class="close-date">Entries will close in <img src="~/images/calender_short_flim.png" alt="">
+                                                                                              <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                                                         </span>
+                                                                                         </span>
+                                                                                      </div>
+                                                                                   </div>  -->
+                                            <div class="col-md-12 cutterspace">
+                                                <a href="#competion_list.html">
+                                                    <img class="competition-img" src="~/images/13.png" alt="">
+                                                </a>
+                                                <div class="details">
+                                                    <span class="title">
+                                                        Street Artists <br>
+                                                        Contest
+
+
+                                                        <br />
+                                                    </span>
+                                                    <span class="post-date">Posted May 5th 2019</span>
+
+
+                                                    <div class="competion">
+                                                        <span>Entries <br> 17</span>
+                                                        <span class="post-date">
+                                                            Awarded To:<br>
+                                                            <img src="~/images/money.png" alt=""> 20000
+                                                        </span>
+
+                                                    </div>
+                                                    <!-- <span class="entries">17 entries</span>  -->
+                                                    <span class="aw-details">
+                                                        <!-- <span>Awarded To:</span>
+                                                         <span class="price"><img src="~/images/money.png" alt=""> 20000</span>  -->
+                                                        <span class="close-date">
+                                                            Entries will close in <img src="~/images/calender_short_flim.png" alt="">
+                                                            <a href="#DSpecial_competitions_list_document.html">
+                                                                <button type="button" class="btn btn-default" id="view_more_result">View more</button>
+                                                            </a>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                        </div>
+                        <!--/carousel-inner-->
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <a href="competion_list.html" class="btn more-btn pull-right">View More</a>
+                    <!--/myCarousel-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

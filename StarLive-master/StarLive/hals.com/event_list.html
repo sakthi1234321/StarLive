@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HALS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Calling Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Calling Favicon -->
+    <!-- ********************* -->
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/meanmenu.css" media="all">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" class="color-changing" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    
+    
+   
+    <style>
+    
+    
+    
+    
+    .pb-95 {
+    padding-bottom: 17px;
+}
+
+.pt-80 {
+    padding-top: 25px;
+}
+
+.custom-select {
+    border:0px;
+}
+
+..cid-ruv1xdLeji .content-slider-wrap img {
+    width:307px;
+    height:207px;
+}
+
+
+.cid-ruv1xdLeji .content-slider-wrap {
+    width: auto;
+}
+     
+    </style>
+    
+    <script type="text/javascript">
+	
+		
+		function validate(){
+
+	
+
+		var name = document.getElementById("name");
+
+		
+
+		if (name.value == "")
+
+		{
+
+			document.getElementById('nmmsg').innerHTML = "Please enter your name";
+
+            return false;
+
+		} 
+
+		else
+
+		{
+
+		    document.getElementById('nmmsg').innerHTML = "";
+
+		}
+
+		
+
+		 // Phone Validation
+
+		
+
+	
+
+	      var phone = document.getElementById("phone");
+
+	      var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+
+          if(!phone.value.match(phoneNum)) 
+
+		{
+
+
+
+				 document.getElementById("phmsg").innerHTML ="You have entered an invalid phone number";
+
+			     return false;
+
+		}	
+
+		else
+
+		{
+
+		      document.getElementById("phmsg").innerHTML ="";
+
+		}
+
+	
+
+    
+
+	 // Email Validation 
+
+
+
+		var email = document.getElementById('email');
+
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
+
+		if (!filter.test(email.value)) 
+
+		{
+
+			document.getElementById('msg').innerHTML = 'Please provide a valid email address';
+
+			return false;
+
+		}
+
+		else
+
+		{
+
+		    document.getElementById('msg').innerHTML = '';
+
+		   
+
+		}
+
+		
+
+		/**$.post(
+
+			$(".contact_form").attr('action'),
+
+			$(".contact_form").serialize(),
+
+			function(data){
+
+				alert(data);
+
+				if(data.match('success') != null) {
+
+					//$(".contact_form").get(0).reset();
+
+				}
+
+			}
+
+		)**/
+
+		$.post(
+
+			$(".contact_form").attr('action'),
+
+			$(".contact_form").serialize(),
+
+			function(data){
+
+				$(".cf_response").html(data).fadeIn('fast');
+
+				if(data.match('success') != null) {
+
+				  $(".contact_form").get(0).reset();
+
+				}
+
+			}
+
+		) // end post
+
+	return false;
+
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+   
+    <header>
+        <section class="top-header">
+           <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-5 col-sm-4 col-5">
+                    <div class="logo transition-4">
+                        <a href="index.html">
+                            <img src="img/logo/footer_logo.png" class="transition-4" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-8 col-7">
+                    <div class="icon-links d-flex align-items-center">
+                        <a href="#" class="shop-icon d-none d-sm-block">
+                            <!--<i class="fas fa-shopping-basket"></i>  -->
+                          <span style="letter-spacing: 4px;">BUY </span><br>
+                                <span>TICKETS
+                            </span>
+                        </a>
+                       <!-- <a href="#" class="search-icon d-none d-sm-block" data-toggle="modal" data-target="#searchModal">
+                            <i class="fas fa-search"></i>
+                        </a>-->
+                       <!-- <a href="#" class="btn btn-round d-none d-sm-block blob-small">CONTACT US</a>-->
+                    </div>
+                    <div class="menu-links">
+                        <nav class="main-menu white">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home 
+                                        <!--<i class="fas fa-angle-down"></i>   -->
+                                    </a>
+                                    <!--<ul class="submenu">
+                                        <li><a href="index.html">Home Page V1</a></li>
+                                        <li><a href="index-2.html">Home Page V2</a></li>
+                                        <li><a href="index-3.html">Home Page V3</a></li>
+                                    </ul>--->
+                                </li>
+                                <li>
+                                    <a href="about.html">About Us 
+                                        <!--<i class="fas fa-angle-down"></i>  -->
+                                    </a>
+                                   <!-- <ul class="submenu">
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li>
+                                            <a href="team.html" class="sub-2">Our Team</a>
+                                            <ul class="submenu">
+                                                <li><a href="team.html">Our Team V1</a></li>
+                                                <li><a href="team-2.html">Our Team V2</a></li>
+                                                <li><a href="team-3.html">Our Team V3</a></li>
+                                                <li><a href="team-detail.html">Team Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="clients.html">Partners</a></li>
+                                        <li>
+                                            <a href="career.html" class="sub-2">Career</a>
+                                            <ul class="submenu">
+                                                <li><a href="career.html">Career</a></li>
+                                                <li><a href="career-details.html">Career Detail</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="services.html" class="sub-2">Service</a>
+                                            <ul class="submenu">
+                                                <li><a href="services.html">Service V1</a></li>
+                                                <li><a href="services-2.html">Service V2</a></li>
+                                                <li><a href="services-details.html">Service Detail</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>--->
+                                </li>
+                               <li>
+                                    <a href="#services.html">SERVICES
+                                        <i class="fas fa-angle-down"></i>  
+                                    </a>
+                                    <ul class="submenu">
+                                        <li><a href="services.html">Film Abroad </a></li>
+                                       <li><a href="events.html">Event</a></li>
+                                        <!---<li><a href="portfolio-masonty.html">Portfolio Masonry</a></li>
+                                        <li><a href="portfolio-details.html">Portfolio Detail</a></li>  -->
+                                    </ul> 
+                                </li>
+                                <li>
+                                    <a href="events.html" class="active">EVENTS
+                                    <!-- <i class="fas fa-angle-down"></i>  -->
+                                 </a>
+                                    <!--<ul class="submenu">
+                                        <li>
+                                            <a href="blog-listing-standared.html" class="sub-2">Blog Listing</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog-listing-standared-2.html">Blog Standared </a></li>
+                                                <li><a href="blog-listing-standared-left.html">Blog Standared Sidebar Left</a></li>
+                                                <li><a href="blog-listing-nosidebar.html">Blog Standared No Sidebar</a></li>
+                                                <li><a href="blog-listing-masonty.html">Blog Masonry</a></li>
+                                                <li><a href="blog-listing-grid.html">Blog Grid</a></li>
+                                                <li><a href="blog-listing-grid-sidebar.html">Blog Grid Sidebar</a></li>
+                                                <li><a href="blog-listing-grid-2.html">Blog Grid 2</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="blog-details-image.html" class="sub-2">Blog Details</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog-details-image.html">Blog Detail Image</a></li>
+                                                <li><a href="blog-details-slider.html">Blog Detail Slider</a></li>
+                                                <li><a href="blog-details-video.html">Blog Detail Video</a></li>
+                                                <li><a href="blog-details-no-sidebar.html">Blog Detail No Sidebar</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>  -->
+                                </li>
+                                <li>
+                                    <a href="contact.html">CONTACT US 
+                                        <!--<i class="fas fa-angle-down"></i>  -->
+                                    </a>
+                                    <!---<ul class="submenu">
+                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li>
+                                            <a href="pricing-1.html" class="sub-2">Pricing</a>
+                                            <ul class="submenu">
+                                                <li><a href="pricing-1.html">Price V1</a></li>
+                                                <li><a href="pricing-2.html">Price V2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="signup.html">Signup</a></li>
+                                        <li><a href="testimonials.html">Testimonials</a></li>
+                                        <li><a href="404.html">Error</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="thank-you.html">Thank You Page</a></li>
+                                        <li><a href="terms.html">Terms & Policy</a></li>
+                                    </ul>  --->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+    </header>
+
+    <div class="search-popup modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group relative">
+                            <input type="text" class="form-control input-search" id="search" placeholder="Search here...">
+                            <i class="fas fa-search transform-v-center"></i>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-times close-search-modal" data-dismiss="modal" aria-label="Close"></i>
+    </div>
+    <!-- Header end -->
+
+    <!-- immer banner start -->
+    <section class="inner-banner pt-80 pb-95" style="background-image: url('img/banner/event_list.png');" data-overlay="7">
+        <div class="container-fluid">
+            <div class="row z-5 align-items-center">
+               
+                    
+                   
+                         
+                           <div class="col-md-5">
+                               
+                               <div class="event_list_banner_left">
+                               <img src="img/banner/event_list_left.png" alt="event-list_left">
+                               </div>
+                           </div>
+                           
+                         
+                        
+                           <div class="col-md-6">
+                           <div class="event_list_menu">
+                               
+                               <ul>
+                                   <li>We create impactful  </li>
+                                   <li>digital experiences  </li>
+                                    <li>that help people. </li>
+                               </ul>
+                               
+                               
+                               <p>
+                                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                 </p>
+                                 
+                                 </div>
+                               
+                </div>
+               <!-- <div class="col-md-4 text-center text-md-right">
+                    <nav aria-label="breadcrumb" class="banner-breadcump">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home fs-12 mr-5"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>  --->
+            </div>
+        </div>
+    </section>
+    <!-- immer banner end -->
+
+  
+   
+
+
+<section class="Our_Event">
+    <div class="container">
+                  <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="half_next_events">
+                     
+                        <h2>Star talks</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    
+                    <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_1.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                </a>
+                
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                  <div class="col-md-6">
+                  
+                  <div class="latest_event_list_right">
+                      <h2>Villa De Toro</h2>
+                  </div>
+                  
+                  <div class="latest_event_list_right_menu1">
+                     <ul>
+                         <li>Restarunt  </li>
+                         <li>10SR - 12SR  </li>
+                     </ul>
+                     
+                     
+                    
+                      
+                  </div>
+                
+                
+                <div class="latest_event_list_right_menu_content">
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                
+                <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                 <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                <div class="latest_event_lists_right_menu_view_button">
+                    
+                    <ul>
+                        <li><button type="button" class="btn btn-primary" id="Event_list_right_menu"> View Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+                        
+                         <li><button type="button" class="btn btn-primary" id="Event_list_right_menu">  <i class="fa fa-heart" aria-hidden="true"></i></button></li>
+                         
+                           <li><button type="button" class="btn btn-primary" id="Event_list_right_menu_arrow">  <i class="fa fa-arrow-right" aria-hidden="true"></i> <br><i class="fa fa-arrow-left" aria-hidden="true"></i></button></li>
+                           
+                             <li><button type="button" class="btn btn-primary" id="Event_list_right_menu">  <i class="fa fa-map-marker" aria-hidden="true"></i></button></li>
+                    </ul>
+                    
+                </div>
+                
+                 </div>
+                 
+                 
+                  </div>
+              
+              
+              
+              
+              
+              
+              
+              
+                <div class="row">
+               
+                <div class="col-md-6">
+                    
+                        <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_2.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                  </a>
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                  <div class="col-md-6">
+                  
+                  <div class="latest_event_list_right">
+                      <h2>Villa De Toro</h2>
+                  </div>
+                  
+                  <div class="latest_event_list_right_menu1">
+                     <ul>
+                         <li>Restarunt  </li>
+                         <li>10SR - 12SR  </li>
+                     </ul>
+                     
+                     
+                    
+                      
+                  </div>
+                
+                
+                <div class="latest_event_list_right_menu_content">
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                
+                <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                 <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                <div class="latest_event_lists_right_menu_view_button">
+                    
+                    <ul>
+                        <li><button type="button" class="btn btn-primary" id="Event_list_right_menu"> View Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+                        
+                         <li><button type="button" class="btn btn-primary" id="Event_list_right_menu">  <i class="fa fa-heart" aria-hidden="true"></i></button></li>
+                         
+                           <li><button type="button" class="btn btn-primary" id="Event_list_right_menu_arrow">  <i class="fa fa-arrow-right" aria-hidden="true"></i> <br><i class="fa fa-arrow-left" aria-hidden="true"></i></button></li>
+                           
+                             <li><button type="button" class="btn btn-primary" id="Event_list_right_menu">  <i class="fa fa-map-marker" aria-hidden="true"></i></button></li>
+                    </ul>
+                    
+                </div>
+                
+                 </div>
+                 
+                 
+                  </div>
+                 
+        </div>
+   
+</section>
+   
+
+
+
+
+  
+
+<section class="Our_Event">
+    <div class="container">
+                  <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="half_next_events">
+                     
+                        <h2>upcoming events</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    
+                        <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_3.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <div class="events_conts_list">
+                    
+                       <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                  <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                
+                    
+                </div>
+                
+                </a>
+                
+                
+                
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                  <div class="col-md-6">
+                      
+                          <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_4.png" alt="">
+                    
+                    <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live  <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 160sr   <br><span>closed</span></li>
+                       
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                
+                    
+                </div>
+                
+                
+                
+                
+                
+                  <div class="events_conts_list">
+                    
+                       <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                  <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                
+                    
+                </div>
+                
+                
+                   </a>
+                
+                
+                
+                 </div>
+                 
+                 
+                  </div>
+              
+                 
+                 
+                 
+                       <div class="row">
+                 
+                   <div class="col-md-6">
+                       
+                           <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_5.png" alt="">
+                    
+                   <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live   <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 120sr</li>
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+                
+                
+                   <div class="events_conts_list">
+                    
+                       <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                  <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                
+                    
+                </div>
+                
+                
+                </a>
+                
+                
+                
+                
+                 </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                   <div class="col-md-6">
+                       
+                           <a href="events.html">
+                    <div class="gallery">
+                    <img src="img/banner/latest_events_6.png" alt="">
+                    
+                     <div class="gallery_content">
+                        
+                        <div class="gallery_content_left">
+                          <ul>
+                       <li> Low Roar Live  <br><span> Festival, Night life</span></li>
+                        </ul>
+                        
+                        </div>
+                        
+                         <div class="gallery_content_right">
+                          <ul>
+                       <li> 160sr   <br><span>closed</span></li>
+                       
+                        </ul>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    </div>
+                    
+                    
+                    
+                       <div class="events_conts_list">
+                    
+                       <div class="latest_event_lists_right_menu_address">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/event_list_address.png" alt="event_list"></li>
+                        
+                           <li>  642 obie way suite 097, Mayanaanab, Dubai</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                  <div class="latest_event_lists_right_menu_date">
+                    
+                    <ul>
+                        <li>  <img src="img/banner/date1.png" alt="event_list"></li>
+                        
+                           <li> April 25<sup>th</sup> - 29 <sup>th </sup></li>
+                           
+                           <li>  <img src="img/banner/event_clock.png" alt="event_list"></li>
+                        
+                           <li>  08.00 PM - 10.00 PM </li>
+                    </ul>
+                    
+                    
+                    
+                </div>
+                
+                
+                
+                    
+                </div>
+                
+                
+                
+                    </a>
+                    
+                </div>
+                 </div>
+                 
+                 
+                 
+                 
+                 <div class="row">
+                     <div class="col-md-12">
+                         <div class="view_more_buttons">
+                             
+                             <button type="button" class="btn btn-primary" id="Event_list_right_menu_bottom">View All  <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                             
+                         </div>
+                         
+                     </div>
+                     
+                 </div>
+                 
+                 
+                 
+       
+    </div>
+</section>
+   
+   
+   
+  <!---
+<section class="carousel slide cid-ruv1xdLeji" data-interval="false" id="slider2-2">
+
+    
+    <div class="container content-slider">
+        <div class="content-slider-wrap">
+            <div><div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+			<div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(img/banner/video_gallery.png);">
+			<div class="container container-slide"><div class="image_wrapper"><img src="img/banner/video_gallery.png">
+			<div class="carousel-caption justify-content-center">
+			<div class="col-10 align-center">
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(img/banner/video_gallery.png);">
+			<div class="container container-slide"><div class="image_wrapper"><img src="img/banner/video_gallery.png">
+			<div class="carousel-caption justify-content-center"><div class="col-10 align-center">
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(img/banner/video_gallery.png);">
+			<div class="container container-slide">
+			<div class="image_wrapper">
+			<img src="img/banner/video_gallery.png">
+			<div class="carousel-caption justify-content-center">
+			<div class="col-10 align-center">
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#slider2-2">
+			<span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only">Previous</span></a>
+			<a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" href="#slider2-2">
+			<span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only">Next</span></a>
+			</div>
+			</div> 
+        </div>
+    </div>
+</section>
+--->
+
+
+
+
+<section class="contact_wrapper">
+    <div class="container">
+     <div class="row">
+        <div class="col-md-5">
+
+            <div class="contact_content">
+                <h2>Get Your<br>
+                    Tickets
+                </h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                </p>
+
+
+               
+            </div>
+        </div>
+
+
+        <div class="col-md-7">
+            <div class="footer_contact_form">
+         <form  class="form-inline"   method="post" action="php_helpers/_contact-process.php"  novalidate>
+    <div class="form-group">
+      <label for="usr" style="color:#e06464; font-size: 16px;  font-family:RobotoCondensed-Light;"> YOUR NAME:</label>
+     <input type="text" class="form-control" id="name" name="name" >
+       <p id="nmmsg" class="red"></p>
+    </div>
+    
+     <div class="form-group">
+      <label for="usr" style="color:#e06464; font-size: 16px;  font-family:RobotoCondensed-Light;"> Phone Number:</label>
+      <input type="text" class="form-control"    id="phone" name="phone" >
+        <p id="phmsg" class="red"></p>
+    </div>
+     <div class="form-group">
+      <label for="pwd" style="color:#e06464; font-size: 16px;  font-family:RobotoCondensed-Light;">E-MAIL:</label>
+      <input type="text" class="form-control"   id="email" name="email">
+      	<p id="msg" class="red"></p>
+    </div>
+     
+    <div class="custom-select" name="textarea">
+  <select style="display: none;">
+    <option value="0" name="textarea">NUMBER OF SEATS:</option>
+    <option value="1" name="textarea">1</option>
+    <option value="2" name="textarea">2</option>
+    
+  </select><div class="nice-select"><span class="current">NUMBER OF SEATS:</span><ul class="list"><li data-value="0" class="option selected">NUMBER OF SEATS:</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li></ul></div>
+</div>
+
+ <div class="form-group">
+    <div class="contact" id="register_now">
+                              <button type="submit" onclick="return validate()" class="btn btn-primary" id="contact_button" >REGISTER NOW
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                        </div>
+                        
+                         </div>
+  </form>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+<section class="footer_wrapper">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer_logo">
+      <img src="img/logo/footer_logo.png" alt="" class="footer_logo_sec">
+      <p>copyright    &copy;      2019</p>
+
+       <h6>All Rights Reserved.</h6>
+      </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="footer-right_banner">
+                <img src="img/team/social_icons.png" alt="footer">
+             </div>
+        </div>
+         </div>
+
+          </div>
+      
+
+    </footer>
+
+
+
+    </section>
+    
+    
+    
+    
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+ 
+ 
+  
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+    
+    
+    
+    
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+  <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+  <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/slidervideo/script.js"></script>
+    
+    
+    
+    
+
+   
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/lightslider.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- JS Files end -->
+</body>
+
+
+<!-- Mirrored from vs-themes.co.in/bizz/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 05:38:29 GMT -->
+</html>
